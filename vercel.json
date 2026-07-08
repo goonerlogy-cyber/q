@@ -1,9 +1,5 @@
 {
-  "version": 2,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/website/$1"
-    }
-  ]
+  "framework": null,
+  "buildCommand": "echo 'No build command'",
+  "outputDirectory": "."
 }
