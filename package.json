@@ -1,8 +1,0 @@
-{
-  "name": "ai-papers-portfolio",
-  "version": "1.0.0",
-  "description": "Portfolio of recreated AI/ML papers",
-  "scripts": {
-    "build": "echo 'No build step required'"
-  }
-}
