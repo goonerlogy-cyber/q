@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Atari with Deep Reinforcement Learning</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { max-width: 800px; margin: 40px auto; padding: 0 20px; font-family: "Latin Modern", Georgia, serif; line-height: 1.6; }
+        h1, h2 { text-align: center; }
+        img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .back-link { display: inline-block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
+    <h1>Playing Atari with Deep Reinforcement Learning (DQN)</h1>
+    <p style="text-align: center;"><strong>Reference:</strong> Mnih et al., 2013</p>
+
+    <h2>Abstract</h2>
+    <p>This project recreates the Deep Q-Network (DQN) algorithm, a breakthrough in Reinforcement Learning that successfully combined Q-Learning with deep neural networks. By utilizing a Replay Memory buffer and a detached Target Network, DQN stabilized the training of deep value functions.</p>
+
+    <h2>Methodology</h2>
+    <p>I implemented the DQN algorithm in PyTorch and evaluated it on the classic Gymnasium <code>CartPole-v1</code> environment. The agent observes the state vector (position, velocity, angle, angular velocity) and selects discrete actions (push left or push right).</p>
+    <ul>
+        <li><strong>Network Architecture:</strong> 3-layer MLP</li>
+        <li><strong>Memory Buffer:</strong> Size 10,000</li>
+        <li><strong>Optimizer:</strong> AdamW (lr=1e-4)</li>
+        <li><strong>Exploration:</strong> Epsilon-greedy (decaying from 0.9 to 0.05)</li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>The plot below displays the reward (number of frames the pole remained upright) per episode. As training progresses and epsilon decays, the agent learns to stabilize the pole for longer durations.</p>
+    <img src="../assets/dqn/reward_plot.png" alt="DQN Reward Plot">
+
+    <h2>Conclusion</h2>
+    <p>This implementation successfully captures the essence of the original DQN paper. The replay memory breaks temporal correlations in the training data, and the target network provides stable Q-value targets, allowing the agent to converge on an optimal policy.</p>
+</body>
+</html>

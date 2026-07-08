@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attention Is All You Need</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { max-width: 800px; margin: 40px auto; padding: 0 20px; font-family: "Latin Modern", Georgia, serif; line-height: 1.6; }
+        h1, h2 { text-align: center; }
+        img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .back-link { display: inline-block; margin-bottom: 20px; }
+        pre { background: #f4f4f4; padding: 10px; overflow-x: auto; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
+    <h1>Attention Is All You Need (Transformer)</h1>
+    <p style="text-align: center;"><strong>Reference:</strong> Vaswani et al., 2017</p>
+
+    <h2>Abstract</h2>
+    <p>This project recreates the foundational Transformer architecture, focusing on the decoder-only generative structure common in modern Large Language Models (LLMs) like GPT. By leveraging multi-head self-attention mechanisms instead of recurrence, the model learns to generate text.</p>
+
+    <h2>Methodology</h2>
+    <p>I built a miniature character-level Transformer using PyTorch and trained it on the "Tiny Shakespeare" dataset. The architecture includes token and positional embeddings, multi-head causal self-attention blocks, and feed-forward networks.</p>
+    <ul>
+        <li><strong>Context Block Size:</strong> 8 tokens</li>
+        <li><strong>Embedding Dimension:</strong> 32</li>
+        <li><strong>Attention Heads:</strong> 4</li>
+        <li><strong>Layers:</strong> 3</li>
+        <li><strong>Optimizer:</strong> AdamW (lr=1e-3)</li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>The model was trained for 500 iterations. Below is the learning curve showing the training and validation loss decreasing, indicating that the network successfully learned the underlying character distribution.</p>
+    <img src="../assets/transformer/loss_plot.png" alt="Transformer Loss Plot">
+
+    <p>After a short training period, the model generates the following raw character output. While it isn't perfect English, the model has clearly learned word boundaries, basic capitalization, and Shakespearean formatting:</p>
+    <pre id="gen-text">Loading...</pre>
+
+    <script>
+        fetch('../assets/transformer/generated_text.txt')
+            .then(response => response.text())
+            .then(text => document.getElementById('gen-text').innerText = text);
+    </script>
+
+    <h2>Conclusion</h2>
+    <p>Even at a microscopic scale, the self-attention mechanism quickly captures temporal dependencies in sequences, proving the extreme effectiveness of the Transformer architecture.</p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative Adversarial Networks</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { max-width: 800px; margin: 40px auto; padding: 0 20px; font-family: "Latin Modern", Georgia, serif; line-height: 1.6; }
+        h1, h2 { text-align: center; }
+        img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .back-link { display: inline-block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
+    <h1>Generative Adversarial Networks (GAN)</h1>
+    <p style="text-align: center;"><strong>Reference:</strong> Goodfellow et al., 2014</p>
+
+    <h2>Abstract</h2>
+    <p>This project reproduces the core concepts of Generative Adversarial Networks (GANs). A GAN consists of two neural networks, a generator and a discriminator, which are trained simultaneously through an adversarial process. The generator attempts to create realistic data (in this case, handwritten digits from the MNIST dataset), while the discriminator attempts to distinguish between real data and the generator's fakes.</p>
+
+    <h2>Methodology</h2>
+    <p>I implemented a standard Multi-Layer Perceptron (MLP) architecture for both the generator and discriminator using PyTorch. The model was trained on the MNIST dataset.</p>
+    <ul>
+        <li><strong>Latent Dimension:</strong> 64</li>
+        <li><strong>Optimizer:</strong> Adam (lr=0.0002)</li>
+        <li><strong>Loss Function:</strong> Binary Cross-Entropy (BCE)</li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>Below are the training loss curves for both the Generator (G) and Discriminator (D) over the training epochs.</p>
+    <img src="../assets/gan/loss_plot.png" alt="GAN Loss Plot">
+
+    <p>After training, the generator produces the following sample images from random noise:</p>
+    <img src="../assets/gan/generated_samples.png" alt="GAN Generated Samples" style="max-width: 400px;">
+
+    <h2>Conclusion</h2>
+    <p>This lightweight reproduction successfully demonstrates the adversarial training dynamic. Even with a simple architecture and short training time, the generator begins to capture the general structure of handwritten digits.</p>
+</body>
+</html>
