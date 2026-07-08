@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Encoding Variational Bayes</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { max-width: 800px; margin: 40px auto; padding: 0 20px; font-family: "Latin Modern", Georgia, serif; line-height: 1.6; }
+        h1, h2 { text-align: center; }
+        img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .back-link { display: inline-block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
+    <h1>Auto-Encoding Variational Bayes (VAE)</h1>
+    <p style="text-align: center;"><strong>Reference:</strong> Kingma & Welling, 2013</p>
+
+    <h2>Abstract</h2>
+    <p>Variational Autoencoders (VAEs) provide a probabilistic manner for describing an observation in latent space. Rather than mapping inputs to fixed vectors like standard autoencoders, a VAE maps inputs to parameters of a probability distribution (mean and variance), enabling the generation of new, continuous data.</p>
+
+    <h2>Methodology</h2>
+    <p>I built a VAE using PyTorch, featuring an MLP-based encoder and decoder. The network was trained on the MNIST dataset.</p>
+    <ul>
+        <li><strong>Latent Dimension:</strong> 20</li>
+        <li><strong>Optimizer:</strong> Adam (lr=1e-3)</li>
+        <li><strong>Loss Function:</strong> Binary Cross-Entropy + Kullback-Leibler (KL) Divergence</li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>The training loss below tracks the sum of the reconstruction loss (how well the model reproduces the input) and the KL divergence (how close the latent distribution is to a standard normal distribution).</p>
+    <img src="../assets/vae/loss_plot.png" alt="VAE Loss Plot">
+
+    <p>By sampling randomly from the learned normal distribution in the 20-dimensional latent space and passing those vectors through the decoder, the VAE generates the following novel handwritten digits:</p>
+    <img src="../assets/vae/generated_samples.png" alt="VAE Generated Samples" style="max-width: 400px;">
+
+    <h2>Conclusion</h2>
+    <p>The VAE effectively learns a continuous latent representation of the dataset. Even on a limited sample size, the decoder learns to generate coherent shapes that closely resemble handwritten digits.</p>
+</body>
+</html>

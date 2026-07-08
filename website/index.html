@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Paper Reproductions</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { max-width: 800px; margin: 40px auto; padding: 0 20px; font-family: "Latin Modern", Georgia, serif; line-height: 1.6; }
+        h1, h2 { text-align: center; }
+        .paper-list { list-style: none; padding: 0; }
+        .paper-list li { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        .paper-list a { text-decoration: none; color: #0044cc; font-size: 1.2em; font-weight: bold; }
+        .paper-list p { margin: 5px 0 0 0; color: #555; }
+    </style>
+</head>
+<body>
+    <h1>Classic AI/ML Research Papers: A Reproduction Portfolio</h1>
+    <p style="text-align: center;"><strong>Author:</strong> <em>Reproduced locally on an RTX 2050</em></p>
+
+    <p>This portfolio contains lightweight reproductions of five highly influential papers in Artificial Intelligence and Machine Learning. The models were implemented in PyTorch and trained on smaller datasets suitable for a personal laptop environment, demonstrating a deep understanding of the core architectures.</p>
+
+    <h2>Reproduced Papers</h2>
+    <ul class="paper-list">
+        <li>
+            <a href="papers/gan.html">1. Generative Adversarial Networks (GANs)</a>
+            <p>Goodfellow et al., 2014. Generating handwritten digits using a generator and discriminator network on MNIST.</p>
+        </li>
+        <li>
+            <a href="papers/transformer.html">2. Attention Is All You Need (Transformer)</a>
+            <p>Vaswani et al., 2017. A character-level generative model trained on a small text corpus, implementing multi-head self-attention.</p>
+        </li>
+        <li>
+            <a href="papers/resnet.html">3. Deep Residual Learning for Image Recognition (ResNet)</a>
+            <p>He et al., 2015. Overcoming the vanishing gradient problem with skip-connections, demonstrated by training a ResNet-18 on CIFAR-10.</p>
+        </li>
+        <li>
+            <a href="papers/vae.html">4. Auto-Encoding Variational Bayes (VAE)</a>
+            <p>Kingma & Welling, 2013. Learning a continuous latent space to encode and generate MNIST digits.</p>
+        </li>
+        <li>
+            <a href="papers/dqn.html">5. Playing Atari with Deep Reinforcement Learning (DQN)</a>
+            <p>Mnih et al., 2013. A deep Q-network agent learning to solve the CartPole environment via Q-learning and experience replay.</p>
+        </li>
+    </ul>
+
+    <hr>
+    <p style="text-align: center; font-size: 0.9em; color: #777;">Deployed via Vercel.</p>
+</body>
+</html>
