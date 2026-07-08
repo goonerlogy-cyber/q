@@ -1,10 +1,5 @@
 {
-  "version": 2,
-  "public": true,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/website/$1"
-    }
-  ]
+  "framework": null,
+  "buildCommand": "echo 'No build command'",
+  "outputDirectory": "."
 }
