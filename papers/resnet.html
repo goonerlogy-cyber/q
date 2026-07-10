@@ -1,39 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Deep Residual Learning for Image Recognition</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        body { max-width: 800px; margin: 40px auto; padding: 0 20px; font-family: "Latin Modern", Georgia, serif; line-height: 1.6; }
-        h1, h2 { text-align: center; }
-        img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
-        .back-link { display: inline-block; margin-bottom: 20px; }
-    </style>
-</head>
-<body>
-    <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+  <body class="libertinus">
+    <a class="back-link" href="../index.html"> ← Back to Portfolio </a>
     <h1>Deep Residual Learning for Image Recognition (ResNet)</h1>
-    <p style="text-align: center;"><strong>Reference:</strong> He et al., 2015</p>
-
-    <h2>Abstract</h2>
-    <p>This project recreates the ResNet architecture, which introduced "skip connections" (or residual connections) to solve the vanishing gradient problem in very deep neural networks. By allowing gradients to bypass certain layers, ResNets enabled the training of models with hundreds of layers.</p>
-
-    <h2>Methodology</h2>
-    <p>To demonstrate the architecture efficiently, I built a miniature version of a ResNet using standard BasicBlocks (each containing two 3x3 convolutions and a skip connection). The model was trained on the CIFAR-10 image classification dataset.</p>
-    <ul>
-        <li><strong>Architecture:</strong> Mini-ResNet (14 layers)</li>
-        <li><strong>Optimizer:</strong> Adam (lr=0.001)</li>
-        <li><strong>Dataset:</strong> CIFAR-10 (Subset)</li>
-        <li><strong>Loss Function:</strong> Cross-Entropy Loss</li>
-    </ul>
-
-    <h2>Results</h2>
-    <p>The training curves below illustrate the network's ability to learn and classify the images over a short training cycle.</p>
-    <img src="../assets/resnet/training_curves.png" alt="ResNet Training Curves">
-
-    <h2>Conclusion</h2>
-    <p>Even with a scaled-down implementation and limited data, the residual block structure effectively propagates gradients, allowing the network to quickly learn meaningful features for image classification.</p>
-</body>
+    <p style="text-align: center">
+      <strong> Reference: </strong>
+      He et al., 2015
+    </p>
+    <div class="abstract">
+      <h2>Abstract</h2>
+      <p>
+        This project recreates the ResNet architecture, which introduced "skip
+        connections" (or residual connections) to solve the vanishing gradient
+        problem in very deep neural networks. By allowing gradients to bypass
+        certain layers, ResNets enabled the training of models with hundreds of
+        layers.
+      </p>
+    </div>
+    <main>
+      <h2>Methodology</h2>
+      <p>
+        To demonstrate the architecture efficiently, I built a miniature version
+        of a ResNet using standard BasicBlocks (each containing two 3x3
+        convolutions and a skip connection). The model was trained on the
+        CIFAR-10 image classification dataset.
+      </p>
+      <ul>
+        <li>
+          <strong> Architecture: </strong>
+          Mini-ResNet (14 layers)
+        </li>
+        <li>
+          <strong> Optimizer: </strong>
+          Adam (lr=0.001)
+        </li>
+        <li>
+          <strong> Dataset: </strong>
+          CIFAR-10 (Subset)
+        </li>
+        <li>
+          <strong> Loss Function: </strong>
+          Cross-Entropy Loss
+        </li>
+      </ul>
+      <h2>Results</h2>
+      <p>
+        The training curves below illustrate the network's ability to learn and
+        classify the images over a short training cycle.
+      </p>
+      <img
+        alt="ResNet Training Curves"
+        src="../assets/resnet/training_curves.png"
+      />
+      <h2>Conclusion</h2>
+      <p>
+        Even with a scaled-down implementation and limited data, the residual
+        block structure effectively propagates gradients, allowing the network
+        to quickly learn meaningful features for image classification.
+      </p>
+    </main>
+  </body>
 </html>

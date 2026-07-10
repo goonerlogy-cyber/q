@@ -1,213 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI/ML Paper Reproductions</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #f8f9fa;
-            --text-color: #191c1d;
-            --text-muted: #454652;
-            --accent-blue: #000666;
-            --accent-green: #1b6d24;
-            --border-color: #c6c5d4;
-            --card-bg: #ffffff;
-            --shadow: 0 8px 24px rgba(25, 28, 29, 0.06);
-        }
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="libertinus">
+    <header>
+      <h1>AI/ML & Anime Physics Studies</h1>
+      <p class="author">
+        A Reproduction Portfolio &mdash; Reproduced locally on an RTX 2050<br />By
+        Jules
+      </p>
+    </header>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Libertinus Serif', Georgia, serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 30px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        h1 {
-            font-family: 'Inter', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent-blue);
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-
-        .intro {
-            font-size: 1.15rem;
-            margin-bottom: 50px;
-            text-align: justify;
-        }
-
-        .paper-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .paper-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .paper-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-
-        .paper-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(25, 28, 29, 0.1);
-        }
-
-        .paper-card:hover::before {
-            opacity: 1;
-        }
-
-        .paper-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--accent-blue);
-            margin: 0 0 10px 0;
-        }
-
-        .paper-meta {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-        }
-
-        .paper-desc {
-            font-size: 1rem;
-            color: var(--text-color);
-            margin: 0;
-            flex-grow: 1;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid var(--border-color);
-            width: 100%;
-            margin-top: auto;
-        }
-
-        .footer-text {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 20px;
-            background-color: #e0e0ff;
-            color: #000767;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Classic AI/ML Research Papers</h1>
-            <p class="subtitle">A Reproduction Portfolio &mdash; Reproduced locally on an RTX 2050</p>
-        </header>
-
-        <div class="intro">
-            <p>This portfolio presents lightweight, functional reproductions of five foundational papers in Artificial Intelligence and Machine Learning. Designed as a "Digital Dean's Study," this project moves beyond standard tutorials to offer rigorous, ground-up implementations in PyTorch. Each model was trained on scaled-down datasets suitable for a personal laptop environment (Intel i5, 16GB RAM, RTX 2050), demonstrating a profound, practical understanding of the underlying architectures and optimization dynamics.</p>
-        </div>
-
-        <div class="paper-grid">
-            <a href="papers/gan.html" class="paper-card">
-                <span class="tag">Generative Models</span>
-                <h2 class="paper-title">Generative Adversarial Networks</h2>
-                <div class="paper-meta">Goodfellow et al., 2014</div>
-                <p class="paper-desc">Implementation of the original GAN architecture. Features a generator and discriminator network locked in a zero-sum game, trained to synthesize handwritten digits from the MNIST dataset.</p>
-            </a>
-
-            <a href="papers/transformer.html" class="paper-card">
-                <span class="tag">NLP / Sequence Modeling</span>
-                <h2 class="paper-title">Attention Is All You Need</h2>
-                <div class="paper-meta">Vaswani et al., 2017</div>
-                <p class="paper-desc">A complete implementation of the Transformer architecture. Demonstrates scaled dot-product multi-head self-attention by training a character-level generative model on a focused text corpus.</p>
-            </a>
-
-            <a href="papers/resnet.html" class="paper-card">
-                <span class="tag">Computer Vision</span>
-                <h2 class="paper-title">Deep Residual Learning for Image Recognition</h2>
-                <div class="paper-meta">He et al., 2015</div>
-                <p class="paper-desc">Addressing the vanishing gradient problem through identity skip-connections. Features a custom ResNet-18 model trained from scratch on the CIFAR-10 image classification benchmark.</p>
-            </a>
-
-            <a href="papers/vae.html" class="paper-card">
-                <span class="tag">Generative Models</span>
-                <h2 class="paper-title">Auto-Encoding Variational Bayes</h2>
-                <div class="paper-meta">Kingma & Welling, 2013</div>
-                <p class="paper-desc">Exploration of probabilistic generative models. Implements an encoder-decoder architecture that learns a continuous, structured latent space to encode and generate MNIST digits via the reparameterization trick.</p>
-            </a>
-
-            <a href="papers/dqn.html" class="paper-card">
-                <span class="tag">Reinforcement Learning</span>
-                <h2 class="paper-title">Playing Atari with Deep Reinforcement Learning</h2>
-                <div class="paper-meta">Mnih et al., 2013</div>
-                <p class="paper-desc">A foundational Deep Q-Network (DQN) agent. Demonstrates the integration of deep learning with RL, using experience replay and target networks to solve the classic CartPole environment.</p>
-            </a>
-        </div>
+    <div class="abstract">
+      <h2>Abstract</h2>
+      <p>
+        This portfolio presents lightweight, functional reproductions of
+        foundational papers in Artificial Intelligence, Machine Learning, and
+        Theoretical Anime Physics. Designed as a "Digital Dean's Study," this
+        project moves beyond standard tutorials to offer rigorous, ground-up
+        implementations. The models demonstrate a profound, practical
+        understanding of the underlying architectures and optimization dynamics.
+      </p>
     </div>
 
+    <main>
+      <h2>Theoretical Anime Physics</h2>
+      <ul>
+        <li>
+          <a href="papers/gojo.html"
+            ><strong>The Mathematics of Gojo's Infinity</strong></a
+          ><br />An in-depth analysis of convergent series and spatial
+          distortion techniques.
+        </li>
+        <li>
+          <a href="papers/saitama.html"
+            ><strong>Kinetic Energy of Saitama's Punch</strong></a
+          ><br />Calculating the required joules to split clouds on a global
+          scale.
+        </li>
+      </ul>
+
+      <h2>Classic AI/ML Research Papers</h2>
+      <ul>
+        <li>
+          <a href="papers/gan.html"
+            ><strong>Generative Adversarial Networks</strong></a
+          >
+          (Goodfellow et al., 2014)<br />Implementation of the original GAN
+          architecture synthesizing handwritten digits.
+        </li>
+        <li>
+          <a href="papers/transformer.html"
+            ><strong>Attention Is All You Need</strong></a
+          >
+          (Vaswani et al., 2017)<br />A complete implementation of the
+          Transformer architecture for character-level generation.
+        </li>
+        <li>
+          <a href="papers/resnet.html"
+            ><strong>Deep Residual Learning for Image Recognition</strong></a
+          >
+          (He et al., 2015)<br />Addressing the vanishing gradient problem
+          through identity skip-connections.
+        </li>
+        <li>
+          <a href="papers/vae.html"
+            ><strong>Auto-Encoding Variational Bayes</strong></a
+          >
+          (Kingma & Welling, 2013)<br />Exploration of probabilistic generative
+          models using the reparameterization trick.
+        </li>
+        <li>
+          <a href="papers/dqn.html"
+            ><strong>Playing Atari with Deep Reinforcement Learning</strong></a
+          >
+          (Mnih et al., 2013)<br />A foundational Deep Q-Network (DQN) agent
+          solving the CartPole environment.
+        </li>
+      </ul>
+    </main>
+
     <footer>
-        <p class="footer-text">Deployed via Vercel</p>
+      <hr />
+      <p>Deployed via Vercel</p>
     </footer>
-</body>
+  </body>
 </html>
