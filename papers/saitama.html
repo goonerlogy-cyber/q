@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kinetic Energy of Saitama's Punch</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="libertinus">
+    <header>
+      <p><a href="../index.html">&larr; Back to Portfolio</a></p>
+      <h1>Kinetic Energy of Saitama's Punch</h1>
+      <p class="author">Theoretical Anime Physics Department, 2024</p>
+    </header>
+
+    <div class="abstract">
+      <h2>Abstract</h2>
+      <p>
+        This paper calculates the kinetic energy output required for the
+        "Serious Punch" capable of parting the Earth's atmosphere on a global
+        scale. By analyzing the displaced air mass and the velocity of the
+        shockwave, we estimate the joules expended and discuss the biomechanical
+        implications of such force generation.
+      </p>
+    </div>
+
+    <main>
+      <h2>Methodology</h2>
+      <p>
+        To split the cloud cover across a hemisphere, a massive pressure wave
+        must be generated. We model the atmosphere as a compressible fluid and
+        calculate the energy required to displace a volume of air $V$ equivalent
+        to the cleared area.
+      </p>
+      <pre><code>
+def calculate_punch_energy(cloud_clearance_radius_km, shockwave_velocity_mps):
+    # Standard atmospheric density at sea level
+    rho_air = 1.225 # kg/m^3
+
+    # Volume of a hemisphere of air
+    radius_m = cloud_clearance_radius_km * 1000
+    volume = (2/3) * 3.14159 * (radius_m ** 3)
+
+    # Mass of the displaced air
+    mass_air = rho_air * volume
+
+    # Kinetic energy (E = 1/2 * m * v^2)
+    energy_joules = 0.5 * mass_air * (shockwave_velocity_mps ** 2)
+    return energy_joules
+        </code></pre>
+
+      <h2>Results</h2>
+      <p>
+        Assuming a clearance radius of 5,000 kilometers and a shockwave velocity
+        approaching a significant fraction of $c$ to overcome atmospheric
+        pressure instantaneously, the energy output exceeds $10^{28}$ Joules.
+        This is orders of magnitude greater than the Chicxulub impactor (the
+        asteroid that caused the Cretaceous-Paleogene extinction event).
+      </p>
+
+      <h2>Conclusion</h2>
+      <p>
+        The kinetic energy of a "Serious Punch" reaches planetary-busting
+        levels. The survival of the Earth's crust following the recoil of such
+        an attack suggests either directed energy transfer with 100% efficiency
+        or a localized violation of Newton's Third Law.
+      </p>
+    </main>
+  </body>
+</html>

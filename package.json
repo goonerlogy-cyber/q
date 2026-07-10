@@ -4,5 +4,8 @@
   "description": "Portfolio of recreated AI/ML papers",
   "scripts": {
     "build": "echo 'No build step required'"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.5"
   }
 }
