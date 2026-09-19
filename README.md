@@ -1,11 +1,22 @@
 # q
 
-Small public HTML project. Description was just "A".
+Public single-page site (HTML + CSS) with assets, papers, and Vercel deploy config.
 
-Contains an `index.html`, some assets, papers, scripts, and a Vercel config. Not a large product — more of a quick page or experiment that got its own repo.
+## Run
 
-Open `index.html` or deploy via Vercel if you want to see it live.
+Open `index.html` locally, or:
+
+```bash
+npx serve .
+```
+
+Deploy with the included `vercel.json` if you want it live.
+
+## Notes
+
+- `style.css` is large — treat it as generated/bundled styling for the page
+- `papers/` and `scripts/` hold supporting content
 
 ## License
 
-Whatever was intended when it was created. Treat as private unless stated otherwise.
+MIT (see `LICENSE`)
